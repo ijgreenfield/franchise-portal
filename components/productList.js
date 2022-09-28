@@ -4,7 +4,7 @@ import Product from './product'
 import Link from "next/link";
 
 const productList = PRODUCTS.map((product) => 
-    <GridItem>
+    <GridItem key={product.handle}>
         <Link href={`/products/${product.handle}`}>
             <a>
                 <Product product={product}/>
